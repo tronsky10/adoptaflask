@@ -1,0 +1,20 @@
+{% extends './layout.html' %}
+
+
+{% block title %}{{ data.titulo }}{% endblock %}
+
+
+{% block body %}
+<h1>{{ data.bienvenida }}</h1>
+{% if data.numero_perritos > 0 %}
+<ul>
+    {% for perro in data.lista_perritos %}
+
+    <li> {{ perro }} </li>
+
+    {% endfor %}
+</ul>
+{% else %}
+<h2>No hay perritos para mostrar</h2>
+{% endif %}
+{% endblock %}
